@@ -24,6 +24,9 @@ ADD ${FOLDER_ENV} /root/.m2/
 #StrictHostKeyChecking NO 
 RUN echo -e "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
 
+#PER
+RUN chmod 600 /root/.ssh/id_rsa && ls -l /root/.ssh/ -R
+
 #SETUP GIT
 RUN git config --global user.name "DEV ICL TOOL" && git config --global user.email rfcardenas92@gmail.com
 
