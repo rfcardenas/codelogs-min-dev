@@ -7,7 +7,7 @@ ENV FOLDER_KEYS keys/.
 MAINTAINER Ronald Cardenas <rfcardenas@gmail.com>
 
 # INSTALL
-RUN apk update && apk add --update --no-progress nodejs unrar bash git openssh python && \ 
+RUN apk update && apk add --update --no-progress nodejs unrar bash git openssh python g++&& \ 
   npm install -g bower gulp 
 
 
