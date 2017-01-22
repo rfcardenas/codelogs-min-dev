@@ -24,7 +24,7 @@ ADD ${FOLDER_ENV} /root/.m2/
 #StrictHostKeyChecking NO 
 RUN echo -e "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
 
-#PERMISOS
+#PERMISOS id_rsa
 RUN chmod 600 /root/.ssh/id_rsa
 
 #SETUP GIT
