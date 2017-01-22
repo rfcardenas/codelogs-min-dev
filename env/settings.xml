@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    User-specific configuration for maven. Includes things that should not 
+    be distributed with the pom.xml file, such as developer identity, along with 
+    local settings, like proxy information. The default location for the
+    settings file is ~/.m2/settings.xml 
+-->
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <!--proxies>
+        <proxy>
+            <host>my.proxy.host</host>
+        </proxy>
+    </proxies-->
+    
+    <!--pluginGroups>
+        <pluginGroup>org.codehaus.mojo</pluginGroup>
+    </pluginGroups-->
+    <profiles>
+        <profile>
+            <id>netbeans-ide</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <netbeans.installation>/home/rfcardenas/netbeans-8.1</netbeans.installation>
+            </properties>
+        </profile>
+ 	    <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+               <sonar.language>java</sonar.language>
+            </properties>
+        </profile>
+      	<profile>
+	      <id>codelogs-maven</id>
+	        <activation>
+	                <activeByDefault>true</activeByDefault>
+	            </activation>
+		      <repositories>
+		        <repository>
+		            <id>codelogs-maven-repo-snapshots</id>
+		            <name>Repositorio codelogs versiones estables</name>
+		            <releases>
+		                <enabled>true</enabled>
+		            </releases>
+		            <snapshots>
+		                <enabled>true</enabled>
+		            </snapshots>
+		            <url>https://gitlab.com/codelogs-open/codelogs-open-repositories/raw/snapshots</url>
+		        </repository>
+		    </repositories>
+             <distributionManagement>
+                <repository>
+                    <id>codelogs-maven-repo-releases</id>
+                    <name>Repositorio codelogs versiones diarias</name>
+                    <url>git:releases://git@gitlab.com:codelogs-open/codelogs-open-repositories.git</url>
+                </repository>
+                <snapshotRepository>
+                    <id>codelogs-maven-repo-snapshots</id>
+                    <name>Repositorio codelogs versiones estables</name>
+                    <url>git:snapshots://git@gitlab.com:codelogs-open/codelogs-open-repositories.git</url>
+                </snapshotRepository>
+            </distributionManagement>
+	    </profile>
+    </profiles>
+  
+</settings>
+
