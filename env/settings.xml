@@ -50,19 +50,19 @@
 		            <snapshots>
 		                <enabled>true</enabled>
 		            </snapshots>
-		            <url>https://gitlab.com/codelogs-open/codelogs-open-repositories/raw/snapshots</url>
+		            <url>https://gitlab.com/codelogs/codelogs-open-repositories/raw/snapshots</url>
 		        </repository>
 		    </repositories>
              <distributionManagement>
                 <repository>
                     <id>codelogs-maven-repo-releases</id>
                     <name>Repositorio codelogs versiones diarias</name>
-                    <url>git:releases://git@gitlab.com:codelogs-open/codelogs-open-repositories.git</url>
+                    <url>git:releases://git@gitlab.com:codelogs/codelogs-open-repositories.git</url>
                 </repository>
                 <snapshotRepository>
                     <id>codelogs-maven-repo-snapshots</id>
                     <name>Repositorio codelogs versiones estables</name>
-                    <url>git:snapshots://git@gitlab.com:codelogs-open/codelogs-open-repositories.git</url>
+                    <url>git:snapshots://git@gitlab.com:codelogs/codelogs-open-repositories.git</url>
                 </snapshotRepository>
             </distributionManagement>
 	    </profile>
